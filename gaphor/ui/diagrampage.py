@@ -292,7 +292,8 @@ class DiagramPage:
 
         bg = style.get("background-color", (0.0, 0.0, 0.0, 0.0))
         self.diagram_css.load_from_data(
-            f"diagramview {{ background-color: rgba({int(255*bg[0])}, {int(255*bg[1])}, {int(255*bg[2])}, {bg[3]}); }}".encode()
+            f"diagramview {{ background-color: rgba({int(255*bg[0])}, {int(255*bg[1])}, {int(255*bg[2])}, {bg[3]}); }}",
+            -1,
         )
 
         view = self.view
